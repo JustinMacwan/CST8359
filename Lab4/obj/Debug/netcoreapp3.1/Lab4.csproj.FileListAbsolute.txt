@@ -182,3 +182,4 @@ C:\Users\Justin\source\repos\Lab4\Lab4\bin\Debug\netcoreapp3.1\Properties\servic
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Lab4JustinMacwan - Web Deploy\profile.arm.json
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.Lab4JustinMacwan - Web Deploy.json
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Lab4JustinMacwan - Web Deploy\mssql1.arm.json
+C:\Users\Justin\source\repos\Lab4\Lab4\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\local\mssql1.arm.json
