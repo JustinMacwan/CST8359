@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Lab4.Models.Student>
-
+﻿@model Lab4.Models.ViewModels.CommunityViewModel
+@using Lab4.Models
 @{
     ViewData["Title"] = "Index";
 }
@@ -13,35 +13,62 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                Last Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+                First Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnrollmentDate)
+                Enrollment Date
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Student)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@item.Id">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="EditMembership" asp-route-id="@item.Id">Edit Membership</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+@if (Model.Community != null)
+{
+    <h3>Members of the following Communities </h3>
+    <table class="table">
+        <tr>
+            @if (Model.Community.Count() > 0)
+            {
+                <th>Community</th>
+            }
+            else
+            {
+                <th>No Membership record</th>
+            }
+        </tr>
+
+        @foreach (var item in Model.Community)
+        {
+            <tr>
+                <td>@item.Title</td>
+            </tr>
+
+        }
+    </table>
+}

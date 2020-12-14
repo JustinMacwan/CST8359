@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAo2FRkdLgNU6xxFgk90pgHAAAAAACAAAAAAAQZgAAAAEAACAAAABeiatkUoL5l/GZmuE50wgs6cqwHoRMw9uvvokfWZSIEgAAAAAOgAAAAAIAACAAAAB16d0QrMioqpFFeg/rO0vY+5geq9oy8dyJ2EBnSem1AoAAAADHWivq9dzv+x67NTws+2RIk7kDh7/9DbO+u07JOENZPHQISI2ZpcUuFjjCliIUiA6wJ6ErOaZAkmvCVhS/brxg3dgilx7waMkD2pnMGcNQGBtUwfN+98bzoW7lSrwmiRWaajZ7X5EPMIyJyqLB4W3DzyPJPImeeQ03jWDiMrua20AAAAB40nWF8Wy2fzIVNw4zeUD7HoCLM+UM4KpdMytmT53bAEJu662zIkHdPVltq2ZjXlv8Dbbj9yvWF6UZklaj6HvF</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:macwanassign1.database.windows.net,1433%3bInitial Catalog=assign1%3bPersist Security Info=False%3bUser ID=macwan%3bPassword=yA718411%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Lab4.Data.SchoolCommunityContext">
+      <Value>Server=tcp:macwanassign1.database.windows.net,1433%3bInitial Catalog=assign1%3bPersist Security Info=False%3bUser ID=macwan%3bPassword=yA718411%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -2,17 +2,19 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2020-10-25T05:11:12.5873418Z"
+      "restoreTime": "2020-12-14T22:11:04.0709521Z"
     }
   },
   "parameters": {
     "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
       "Type": "subscription",
-      "Value": "58de0f4e-9811-4f24-9fe3-6bab3389f186"
+      "Value": "e346fe54-f24c-4c6a-ad96-4cc88f4efe9a"
     },
     "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
       "Type": "resourceGroup",
-      "Value": "justinmacwanlab4"
+      "Value": "macwanassign1"
     }
   }
 }

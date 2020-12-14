@@ -37,7 +37,7 @@ namespace Lab4.Data
             };
             foreach (Community c in communities)
             {
-                context.Communities.Add(c);
+                context.Community.Add(c);
             }
             context.SaveChanges();
 

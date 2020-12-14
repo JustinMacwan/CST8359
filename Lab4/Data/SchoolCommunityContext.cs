@@ -14,7 +14,7 @@ namespace Lab4.Data
         }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Community> Communities { get; set; }
+        public DbSet<Community> Community { get; set; }
 
         public DbSet<CommunityMembership> CommunityMemberships { get; set; }
 
@@ -23,10 +23,8 @@ namespace Lab4.Data
             modelBuilder.Entity<Student>().ToTable("Student");
 
             modelBuilder.Entity<Community>().ToTable("Community");
-
             modelBuilder.Entity<CommunityMembership>().ToTable("CommunityMembership");
-            modelBuilder.Entity<CommunityMembership>()
-                .HasKey(c => new { c.StudentID, c.CommunityID });
+            modelBuilder.Entity<CommunityMembership>().HasKey(c => new { c.CommunityID, c.StudentID });
         }
     }
 }

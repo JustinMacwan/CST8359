@@ -28,7 +28,7 @@ namespace Lab4.Models
 
         public string FullName { get { return LastName + "," + FirstName; } }
 
-        public ICollection<CommunityMembership> CommunityMemberships { get; set; }
+        public ICollection<CommunityMembership> CommunityMembership { get; set; }
     }
 
 

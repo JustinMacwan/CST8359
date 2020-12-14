@@ -1,9 +1,5 @@
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\appsettings.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\serviceDependencies.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Lab4JustinMacwan - Web Deploy\profile.arm.json
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Lab4.exe
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Lab4.deps.json
 C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Lab4.runtimeconfig.json
@@ -180,6 +176,4 @@ C:\Users\Justin\source\repos\Lab4\Lab4\obj\Release\netcoreapp3.1\staticwebassets
 C:\Users\Justin\source\repos\Lab4\Lab4\obj\Release\netcoreapp3.1\Lab4.dll
 C:\Users\Justin\source\repos\Lab4\Lab4\obj\Release\netcoreapp3.1\Lab4.pdb
 C:\Users\Justin\source\repos\Lab4\Lab4\obj\Release\netcoreapp3.1\Lab4.genruntimeconfig.cache
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\serviceDependencies.Lab4JustinMacwan - Web Deploy.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Lab4JustinMacwan - Web Deploy\mssql1.arm.json
-C:\Users\Justin\source\repos\Lab4\Lab4\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\local\mssql1.arm.json
+C:\Users\Justin\source\repos\Lab4\Lab4\obj\Release\netcoreapp3.1\scopedcss\bundle\Lab4.styles.css

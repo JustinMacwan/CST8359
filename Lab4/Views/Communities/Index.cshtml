@@ -1,5 +1,5 @@
 ﻿@model Lab4.Models.ViewModels.CommunityViewModel
-
+@using Lab4.Models
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,7 +22,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Communities)
+        @foreach (var item in Model.Community)
         {
             <tr>
                 <td>
@@ -32,6 +32,8 @@
                     @Html.DisplayFor(modelItem => item.Budget)
                 </td>
                 <td>
+                    <a asp-action="Index" asp-route-id="@item.ID">Select</a> |
+                    <a asp-action="Ads" asp-route-id="@item.ID">Ads</a> |
                     <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
@@ -40,12 +42,12 @@
         }
     </tbody>
 </table>
-@if (Model.CommunityMemberships != null)
+@if (Model.Student != null)
 {
-    <h3>Community Members </h3>
+    <h3>Members of the Community </h3>
     <table class="table">
         <tr>
-            @if (Model.CommunityMemberships.Count() > 0)
+            @if (Model.Student.Count() > 0)
             {
                 <th>Student Name</th>
             }
@@ -55,10 +57,10 @@
             }
         </tr>
 
-        @foreach (var item in Model.CommunityMemberships)
+        @foreach (var item in Model.Student)
         {
             <tr>
-                <td>@item.Student.FullName</td>
+                <td>@item.FullName</td>
             </tr>
 
         }

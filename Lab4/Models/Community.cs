@@ -22,6 +22,6 @@ namespace Lab4.Models
         [Column(TypeName = "money")]
         public decimal Budget { get; set; }
 
-        public ICollection<CommunityMembership> CommunityMemberships { get; set; }
+        public ICollection<CommunityMembership> CommunityMembership { get; set; }
     }
 }

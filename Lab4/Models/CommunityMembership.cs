@@ -8,8 +8,9 @@ namespace Lab4.Models
     public class CommunityMembership
     {
         public int StudentID { get; set; }
-        public Student Student { get; set; }
         public string CommunityID { get; set; }
-        public Community Community { get; set; }
+        public Community Communities { get; set; }
+        public Student Students { get; set; }
+ 
     }
 }

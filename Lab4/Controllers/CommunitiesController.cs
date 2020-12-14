@@ -25,8 +25,8 @@ namespace Lab4.Controllers
         {
             var viewModel = new CommunityViewModel();
 
-            viewModel.Communities = await _context.Communities
-                  .Include(i => i.CommunityMemberships)
+            viewModel.Community = await _context.Community
+                  .Include(i => i.CommunityMembership)
                   .AsNoTracking()
                   .OrderBy(i => i.Title)
                   .ToListAsync();
@@ -34,11 +34,11 @@ namespace Lab4.Controllers
             if (ID != null)
             {
                 ViewData["CommunityID"] = ID;
-                viewModel.Students = (from s in _context.Students
-                                      from cm in _context.CommunityMemberships
-                                      where s.Id == cm.StudentID &&
-                                      cm.CommunityID == ID
-                                      select s).ToList();
+                viewModel.Student = (from cm in _context.CommunityMemberships 
+                                                 from s in _context.Students where
+                                                 s.Id == cm.StudentID &&
+                                                 cm.CommunityID == ID
+                                                 select s).ToList();
             }
             return View(viewModel);
         }
@@ -51,7 +51,7 @@ namespace Lab4.Controllers
                 return NotFound();
             }
 
-            var community = await _context.Communities
+            var community = await _context.Community
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (community == null)
             {
@@ -91,7 +91,7 @@ namespace Lab4.Controllers
                 return NotFound();
             }
 
-            var community = await _context.Communities.FindAsync(id);
+            var community = await _context.Community.FindAsync(id);
             if (community == null)
             {
                 return NotFound();
@@ -142,7 +142,7 @@ namespace Lab4.Controllers
                 return NotFound();
             }
 
-            var community = await _context.Communities
+            var community = await _context.Community
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (community == null)
             {
@@ -157,15 +157,15 @@ namespace Lab4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var community = await _context.Communities.FindAsync(id);
-            _context.Communities.Remove(community);
+            var community = await _context.Community.FindAsync(id);
+            _context.Community.Remove(community);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CommunityExists(string id)
         {
-            return _context.Communities.Any(e => e.ID == id);
+            return _context.Community.Any(e => e.ID == id);
         }
     }
 }
